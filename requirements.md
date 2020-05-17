@@ -1,0 +1,9 @@
+-pandas
+-regex (re)
+-numpy
+-json
+-nltk
+-matplotlib
+-seaborn
+-string
+-nltk data - stopwords
