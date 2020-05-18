@@ -6,4 +6,5 @@
 -matplotlib
 -seaborn
 -string
--nltk data - stopwords
+-nltk data - stopwords, punkt (tokenize),
+-sklearn preprocessing (MultiLabelBinarizer)
