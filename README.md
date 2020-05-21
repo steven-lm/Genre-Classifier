@@ -39,9 +39,9 @@ To build a model that accurately predicts multiple book genres, we will be train
 
 ## Preproccessing
 ### Data preprocessing:
-**Extract useful data:** We will only be using 'Title', 'Genres' and 'Summary' for our models.
-**Missing values:** Removed all missing values from our dataframe (3718 were found in the 'Genres' column).
-**Freebase Tags:** To remove freebase tags, we import the data using json.loads
+**Extract useful data:** We will only be using 'Title', 'Genres' and 'Summary' for our models.<br/>
+**Missing values:** Removed all missing values from our dataframe (3718 were found in the 'Genres' column).<br/>
+**Freebase Tags:** To remove freebase tags, we import the data using json.loads<br/>
 **Low frequency Genres:** Removed over 150 genres which contained less than 50 books, merged several subgenres into their respective genres (i.e Speculative Fiction -> Fiction).
 
 ### Text preprocessing:
