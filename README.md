@@ -16,8 +16,8 @@ To build a model which accurately predicts multiple book genres, we will be trai
  - Deep Feedfoward Neural Network
 
 ## Dataset:
-**Name:** CMU Book Summary Dataset\n
-**Books:** 16,559\n
+**Name:** CMU Book Summary Dataset<br/>
+**Books:** 16,559<br/>
 **Metadata:**
 
  - Wiki ID
