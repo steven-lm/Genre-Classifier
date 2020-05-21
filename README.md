@@ -64,8 +64,10 @@ For the Neural Network, we will create a work index using Keras's Tokenizer wher
 **Splitting Data:** We will be using the typical 80-20 train/test split to train our models.
 
 ## Training
+To compare our models, we will be using their f1 scores which is the balance between precision/recall since there are multiple labels to be classified. We will also be using the **micro average** since there is a significant class imbalance. 
 ### Baseline model:
-
+For our baseline model, we will simply take the most frequent genre (Fiction:   
+4191) and since there are now 11282 books in our dataset, the baseline accuracy will be 4191/11282 = 37%. Note that accuracy is only with one genre so precision, recall and f1 score are not applicable. With that in mind this is purely for observation.
 ### Random Forest:
 
 ### Logistic Regression:
