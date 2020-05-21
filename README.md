@@ -16,8 +16,8 @@ To build a model which accurately predicts multiple book genres, we will be trai
  - Deep Feedfoward Neural Network
 
 ## Dataset:
-**Name:** CMU Book Summary Dataset
-**Books:** 16,559
+**Name:** CMU Book Summary Dataset\n
+**Books:** 16,559\n
 **Metadata:**
 
  - Wiki ID
@@ -31,10 +31,7 @@ To build a model which accurately predicts multiple book genres, we will be trai
 This project is simple Lorem ipsum dolor generator.
 	
 ## Training
-Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
+
 	
 ## Evaluation
-To run this project, install it locally using npm:
+
