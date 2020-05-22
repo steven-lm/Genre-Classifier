@@ -83,7 +83,13 @@ Since Logistic Regression itself is binary, we must incorporate it with OneVsRes
 
 
 ## Testing Functions
+We will create two testing functions to observe our model.
 
+**Inference function:** Our first function will take in a title name and search if it exists in our dataset. If it exists, this function will then use the summary of the book and predict its genres. We can then observe the difference between the prediction/actual genres. 
+
+**Analyse function:** The analyse function takes in our own text and will predict its genres. For this example we will be using the summary of 'The Woman in White' (from Wikipedia) which does not exist in our dataset. 
+
+The actual genres for this book are Novel, Fiction, Gothic and Mystery so this prediction is considerably accurate. 
 	
 ## Evaluation
 From the results, the Neural network achieved the best f1 score and if we were to measure its accuracy: </br>
