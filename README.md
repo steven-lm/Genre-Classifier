@@ -87,7 +87,7 @@ We will be comparing two Random Forest models, one by itself and one incorporate
 From the results, using the OneVsRest variation yields slightly better results.
 ### Logistic Regression:
 Since Logistic Regression itself is binary, we must incorporate it with OneVsRest.</br>
-![lr](https://github.com/steven-lm/Genre-Classifier/blob/master/images/f1_lr.JPG)
+![lr](https://github.com/steven-lm/Genre-Classifier/blob/master/images/f1_lr.png)
 
 ### Neural Network:
 **Hyperparameters:** To find the optimal hyper parameters for our Neural Network, we will be utilising a combination of trial and error and Gridsearch.</br>
