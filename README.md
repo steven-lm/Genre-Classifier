@@ -41,8 +41,11 @@ To build a model that accurately predicts multiple book genres, we will be train
 ## Preproccessing
 ### Data preprocessing:
 **Extract useful data:** We will only be using 'Title', 'Genres' and 'Summary' for our models.<br/>
+
 **Missing values:** Removed all missing values from our dataframe (3718 were found in the 'Genres' column).<br/>
+
 **Freebase Tags:** To remove freebase tags, we import the data using json.loads<br/>
+
 **Low frequency Genres:** Removed over 150 genres which contained less than 50 books, merged several subgenres into their respective genres (i.e Speculative Fiction -> Fiction).
 
 ![Genre Distribution](https://github.com/steven-lm/Genre-Classifier/blob/master/images/genredist.png)
@@ -76,8 +79,7 @@ For the Neural Network, we will create a work index using Keras's Tokenizer wher
 ## Training
 To compare our models, we will be using their f1 scores which is the balance between precision/recall since there are multiple labels to be classified. We will also be using the **micro average** since there is a significant class imbalance. 
 ### Baseline model:
-For our baseline model, we will simply take the most frequent genre (Fiction:   
-4191) and since there are now 11282 books in our dataset, the baseline accuracy will be 4191/11282 = 37%. Note that accuracy is only with one genre so precision, recall and f1 score are not applicable. With that in mind this is purely for observation.
+For our baseline model, we will simply take the most frequent genre (Fiction: 4191) and since there are now 11282 books in our dataset, the baseline accuracy will be 4191/11282 = 37%. Note that accuracy is only with one genre so precision, recall and f1 score are not applicable. With that in mind this is purely for observation.
 ### Random Forest:
 We will be comparing two Random Forest models, one by itself and one incorporated with OneVsRest.
 ![rd none](https://github.com/steven-lm/Genre-Classifier/blob/master/images/rdnone.png)
