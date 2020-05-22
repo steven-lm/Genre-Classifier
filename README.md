@@ -96,6 +96,12 @@ Since Logistic Regression itself is binary, we must incorporate it with OneVsRes
 **Final Model Visual:**
 ![Model](https://github.com/steven-lm/Genre-Classifier/blob/master/images/NN.jpg)
 
+ - Total param: 4,336,636
+ - Batch size: 25
+ - Epochs: 2
+ - Optimizer: adam
+ - Loss function: binary_crossentropy
+
 **f1 score:**</br>
 ![f1_nn](https://github.com/steven-lm/Genre-Classifier/blob/master/images/f1_nn.png)
 
