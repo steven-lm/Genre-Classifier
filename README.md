@@ -45,6 +45,8 @@ To build a model that accurately predicts multiple book genres, we will be train
 **Freebase Tags:** To remove freebase tags, we import the data using json.loads<br/>
 **Low frequency Genres:** Removed over 150 genres which contained less than 50 books, merged several subgenres into their respective genres (i.e Speculative Fiction -> Fiction).
 
+![Genre Distribution](https://github.com/steven-lm/Genre-Classifier/blob/master/images/genredist.png)
+
 ### Text preprocessing:
 **To clean the text features, we will:**
 
@@ -54,6 +56,13 @@ To build a model that accurately predicts multiple book genres, we will be train
  4. Remove punctuation (with String library)
  5. Remove words with less than 3 characters
  6. Remove stopwords (with NLTK)
+
+Word distribution before:
+![Word Dist before](https://github.com/steven-lm/Genre-Classifier/blob/master/images/worddistbefore.png)
+
+Word distribution after:
+![Word Dist after](https://github.com/steven-lm/Genre-Classifier/blob/master/images/worddistafter.png)
+
 
 ### Preparing data for models:
 **Genres:** Since there are multiple genres to be classified, we will be using a multi label binarizer 
@@ -71,28 +80,40 @@ For our baseline model, we will simply take the most frequent genre (Fiction:
 4191) and since there are now 11282 books in our dataset, the baseline accuracy will be 4191/11282 = 37%. Note that accuracy is only with one genre so precision, recall and f1 score are not applicable. With that in mind this is purely for observation.
 ### Random Forest:
 We will be comparing two Random Forest models, one by itself and one incorporated with OneVsRest.
+![rd none](https://github.com/steven-lm/Genre-Classifier/blob/master/images/rdnone.png)
+
+![enter image description here](https://github.com/steven-lm/Genre-Classifier/blob/master/images/rdone.png)
 
 From the results, using the OneVsRest variation yields slightly better results.
 ### Logistic Regression:
-Since Logistic Regression itself is binary, we must incorporate it with OneVsRest.
+Since Logistic Regression itself is binary, we must incorporate it with OneVsRest.</br>
+![lr](https://github.com/steven-lm/Genre-Classifier/blob/master/images/f1_lr.JPG)
 
 ### Neural Network:
-**Hyperparameters:** To find the optimal hyper parameters for our Neural Network, we will be utilising a combination of trial and error and Gridsearch.
+**Hyperparameters:** To find the optimal hyper parameters for our Neural Network, we will be utilising a combination of trial and error and Gridsearch.</br>
+![grid](https://github.com/steven-lm/Genre-Classifier/blob/master/images/grid.png)
 
 **Final Model Visual:**
+![Model](https://github.com/steven-lm/Genre-Classifier/blob/master/images/NN.jpg)
 
+**f1 score:**</br>
+![f1_nn](https://github.com/steven-lm/Genre-Classifier/blob/master/images/f1_nn.png)
 
 ## Testing Functions
 We will create two testing functions to observe our model.
 
 **Inference function:** Our first function will take in a title name and search if it exists in our dataset. If it exists, this function will then use the summary of the book and predict its genres. We can then observe the difference between the prediction/actual genres. 
+![Inference](https://github.com/steven-lm/Genre-Classifier/blob/master/images/inference_demo.png)
 
 **Analyse function:** The analyse function takes in our own text and will predict its genres. For this example we will be using the summary of 'The Woman in White' (from Wikipedia) which does not exist in our dataset. 
+![Analyse](https://github.com/steven-lm/Genre-Classifier/blob/master/images/analyse_demo.png)
 
 The actual genres for this book are Novel, Fiction, Gothic and Mystery so this prediction is considerably accurate. 
 	
 ## Evaluation
 From the results, the Neural network achieved the best f1 score and if we were to measure its accuracy: </br>
+![traintest_nn](https://github.com/steven-lm/Genre-Classifier/blob/master/images/NNTT.png)
+![nn_acc](https://github.com/steven-lm/Genre-Classifier/blob/master/images/nn_accuracy.png)
 
 we can assume that it is fairly effective.
 
@@ -111,4 +132,3 @@ The libraries/imports are located at the beginning of the Jupyter notebook. For 
  - More models could be created and tested such as Recurrent Neural Networks or Long short-term memory Neural Networks
  - Words could further be cleaned using n-grams and stemming/lemmatization if we had more processing power
  - More word embedding techniques such as GloVe
-
