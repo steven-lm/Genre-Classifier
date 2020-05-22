@@ -1,4 +1,5 @@
 
+
 ## Overview
 This project was made as part of the Microsoft Student Accelerator program 2020.
 
@@ -10,7 +11,7 @@ I've also added explanations for the code in the Jupyter notebook.
 To build a model that accurately predicts multiple book genres, we will be training three different models and comparing them. 
  - Random Forest Classifier
  - Logistic Regression Classifier (Incorporated with OneVsAll)
- - Deep Feedfoward Neural Network
+ - Feedfoward Neural Network
 
 ## Table of contents
 * [Preprocessing](#preproccessing)
@@ -69,19 +70,39 @@ To compare our models, we will be using their f1 scores which is the balance bet
 For our baseline model, we will simply take the most frequent genre (Fiction:   
 4191) and since there are now 11282 books in our dataset, the baseline accuracy will be 4191/11282 = 37%. Note that accuracy is only with one genre so precision, recall and f1 score are not applicable. With that in mind this is purely for observation.
 ### Random Forest:
+We will be comparing two Random Forest models, one by itself and one incorporated with OneVsRest.
 
+From the results, using the OneVsRest variation yields slightly better results.
 ### Logistic Regression:
+Since Logistic Regression itself is binary, we must incorporate it with OneVsRest.
 
 ### Neural Network:
+**Hyperparameters:** To find the optimal hyper parameters for our Neural Network, we will be utilising a combination of trial and error and Gridsearch.
+
+**Final Model Visual:**
+
 
 ## Testing Functions
 
 	
 ## Evaluation
+From the results, the Neural network achieved the best f1 score and if we were to measure its accuracy: </br>
 
+we can assume that it is fairly effective.
+
+In comparison to other similar multi classifiers such as [this movie genre predictor](https://github.com/igblackadder/movie_prediction/blob/master/genre%20prediction%20model.ipynb) which also achieved an f1 score in the 50s range, we can conclude that our Neural network is relatively accurate. 
 
 ## Setup 
-
+The libraries/imports are located at the beginning of the Jupyter notebook. For the versions used at the time of creation of this project, refer to the requirements.txt file. 
 
 ## Future
+**Practicality :** This model can be scaled up to create a book recommendation system based on preferred genres/previously read genres. Other models such as reading history and book ratings could be integrated to achieve this.
+
+**What else could be tried?:** 
+
+ - A better dataset could be used with a better genre distribution since this dataset contained almost 40% fiction.
+ - A bigger dataset with more genres may produce a model which is able to predict rare rgenres
+ - More models could be created and tested such as Recurrent Neural Networks or Long short-term memory Neural Networks
+ - Words could further be cleaned using n-grams and stemming/lemmatization if we had more processing power
+ - More word embedding techniques such as GloVe
 
