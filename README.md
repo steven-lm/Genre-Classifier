@@ -57,10 +57,10 @@ To build a model that accurately predicts multiple book genres, we will be train
  5. Remove words with less than 3 characters
  6. Remove stopwords (with NLTK)
 
-Word distribution before:
+Word distribution before:</br>
 ![Word Dist before](https://github.com/steven-lm/Genre-Classifier/blob/master/images/worddistbefore.png)
 
-Word distribution after:
+Word distribution after:</br>
 ![Word Dist after](https://github.com/steven-lm/Genre-Classifier/blob/master/images/worddistafter.png)
 
 
