@@ -98,7 +98,7 @@ Since Logistic Regression itself is binary, we must incorporate it with OneVsRes
 **Final Model Visual:**
 ![Model](https://github.com/steven-lm/Genre-Classifier/blob/master/images/NN.jpg)
 
- - Total param: 4,336,636
+ - Total params: 4,336,636
  - Batch size: 25
  - Epochs: 2
  - Optimizer: adam
@@ -136,7 +136,7 @@ The libraries/imports are located at the beginning of the Jupyter notebook. For 
 **What else could be tried?:** 
 
  - A better dataset could be used with a better genre distribution since this dataset contained almost 40% fiction.
- - A bigger dataset with more genres may produce a model which is able to predict rare rgenres
+ - A bigger dataset with more samples and genres may produce a model which is able to predict rarer genres
  - More models could be created and tested such as Recurrent Neural Networks or Long short-term memory Neural Networks
  - Words could further be cleaned using n-grams and stemming/lemmatization if we had more processing power
- - More word embedding techniques such as GloVe
+ - Other word embedding techniques such as GloVe
