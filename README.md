@@ -10,7 +10,7 @@ I've also added explanations for the code in the Jupyter notebook.
 **Approach:** 
 To build a model that accurately predicts multiple book genres, we will be training three different models and comparing them. 
  - Random Forest Classifier
- - Logistic Regression Classifier (Incorporated with OneVsAll)
+ - Logistic Regression Classifier (Incorporated with OneVsRest)
  - Feedfoward Neural Network
 
 ## Table of contents
