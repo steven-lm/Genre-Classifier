@@ -1,9 +1,8 @@
 
 
 ## Overview
-This project was made as part of the Microsoft Student Accelerator program 2020.
 
-I enjoy reading books in my spare time so i decided to create this project to automate the process of reading book blurbs to classify its genres. Multi label classification is also a prominent area of research in Machine Learning so I was intrigued with the challenge of combining text analysis and multi label prediction. 
+This project automates the process of reading book blurbs to classify its genres. Multi label classification is also a prominent area of research in Machine Learning so I was intrigued with the challenge of combining text analysis and multi label prediction. 
 
 I've also added explanations for the code in the Jupyter notebook.
 
